@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-export const getContacts = state => state.filterReduser.contacts;
+export const getContacts = state => state.filterReducer.contacts;
 
-export const getFilter = state => state.filterReduser.filter;
+export const getFilter = state => state.filterReducer.filter;
 
 export const inputFilter = createSelector(
   [getContacts, getFilter],

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { ActionsType } from './filterAction';
 
-const contactsReduser = (state = [], { type, payload }) => {
+const contactsReducer = (state = [], { type, payload }) => {
   switch (type) {
     case ActionsType.FILTER_SUCCESS:
       return payload;
@@ -14,7 +14,7 @@ const contactsReduser = (state = [], { type, payload }) => {
   }
 };
 
-const filterReduser = (state = '', { type, payload }) => {
+const filterReducer = (state = '', { type, payload }) => {
   switch (type) {
     case ActionsType.INPUT_FILTER:
       return payload;
@@ -24,6 +24,6 @@ const filterReduser = (state = '', { type, payload }) => {
 };
 
 export default combineReducers({
-  contacts: contactsReduser,
-  filter: filterReduser,
+  contacts: contactsReducer,
+  filter: filterReducer,
 });

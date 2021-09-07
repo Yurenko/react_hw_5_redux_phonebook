@@ -1,9 +1,9 @@
 import { combineReducers, createStore } from 'redux';
 import { devToolsEnhancer } from 'redux-devtools-extension';
-import filterReduser from './filterReduser';
+import filterReducer from './filterReducer';
 
 const rootStorage = combineReducers({
-  filterReduser,
+  filterReducer,
 });
 
 const store = createStore(rootStorage, devToolsEnhancer());
